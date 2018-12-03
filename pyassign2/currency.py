@@ -5,6 +5,13 @@ __pkuid__  = "1800011798"
 __email__  = "1800011798@pku.edu.cn"
 """
 
+"""Module for currency exchange
+
+This module provides several string parsing functions to implement a 
+simple currency exchange routine using an online currency service. 
+The primary function in this module is exchange.
+"""
+
 from urllib.request import urlopen
 
 def exchange(currency_from,currency_to,amount_from):
@@ -30,6 +37,11 @@ def exchange(currency_from,currency_to,amount_from):
         answer=answer+item
     amount_to=float(answer)
     return amount_to
+
+"""Unit test for module exchange
+
+This module tests the function of module exchange.
+"""
 
 def test_exchange():
     """exchange_test tests whether the function exchange works well.
